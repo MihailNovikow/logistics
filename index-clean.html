@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ru" class="">
+
+<head>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Главная страница</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&amp;display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer">
+
+	<link rel="stylesheet" href="./css/main.css">
+	<link id="media" rel="stylesheet" href="css/tablet.css">
+
+	<script type="text/javascript">
+		const link = document.getElementById("media")
+
+		function checkWidth() {
+			const innerWidth = window.innerWidth;
+			let href;
+
+			if (window.matchMedia("screen and (max-width: 525px)").matches) {
+				href = "css/mobile.css";
+				checkCurrentHref(href)
+			} else if (window.matchMedia("screen and (min-width: 525px) and (max-width: 1124px)").matches) {
+				href = "css/tablet.css";
+				checkCurrentHref(href)
+			} else if (window.matchMedia("screen and (min-width: 1124px) and (max-width: 1366px)").matches) {
+				href = "css/laptop.css";
+				checkCurrentHref(href)
+			} else if (window.matchMedia("screen and (min-width: 1366px)").matches) {
+				href = "css/descktop.css";
+				checkCurrentHref(href)
+			}
+		}
+
+		function checkCurrentHref(href) {
+			const currentHref = link.getAttribute("href")
+
+			if (!(href === currentHref)) {
+				setHref(href)
+			}
+		}
+
+		function setHref(href) {
+			link.setAttribute("href", href)
+		}
+
+		checkWidth()
+
+		window.requestAnimationFrame(() => {
+			window.addEventListener('resize', function (event) {
+				checkWidth()
+			}, true);
+		})
+	</script>
+
+	<noscript>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+	</noscript>
+
+
+
+
+</head>
+
+
+<body>
+	<header>
+		<div class="">
+
+			<div class="header">
+				<div class="wrapper">
+					<div class="header-top">
+						<div class="header-logo"><img class="header-logo" src="./images/logo-black.png" alt="Logo">
+						</div>
+
+						<span class="email">
+							autotransport24@yandex.ru
+						</span>
+
+						<button class="city-check" type="button">
+							<span>Москва</span>
+						</button>
+
+						<div class="phone-num">
+							<p>8 (499) 301-72-80</p>
+							<p> Звонок
+								по
+								России бесплатный</p>
+						</div>
+
+
+						<button type="button" a="" href="#" class="call-button">Заказать звонок</button>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+	</header>
+
+	<main>
+
+		<section class="menu">
+			<div class="wrapper">
+				<nav>
+					<ul class="nav-2">
+						<li><a href="">Услуги</a></li>
+						<li><a href="">Преимущества</a></li>
+						<li><a href="">О компании</a></li>
+						<li><a href="">Направления</a></li>
+						<li><a href="">Тарифы</a></li>
+						<li><a href="">Отзывы</a></li>
+						<li><a href="">Статьи</a></li>
+						<li><a href="">Контакты</a></li>
+
+					</ul>
+				</nav>
+			</div>
+		</section>		
+		<hr> <div class="hr-menu-active"></div>
+		<section class="banner">
+			<div class="wrapper">
+				<h1 class="title">Доставка грузов<br>
+					по всей России и СНГ<br>
+					от 100 кг</h1>
+				<a href=""></a>
+			</div>
+			<div class="bg-yellow">
+				<h2>
+					<div class="title-h2">Получите расчет стоимости грузоперевозки за 30 секунд
+					</div>
+				</h2>
+				<div class="calc-params">
+					<div class="grid-item">
+						<div class="grid-item-rectangle">
+							<input class="grid-item-rectangle" type="text" placeholder="Город отправления
+								">
+						</div>
+					</div>
+					<button class="grid-btn-min"><img src="../images/min-btn.png" alt=""></button>
+					<div class="grid-item">
+						<div class="grid-item-rectangle">
+							<input class="grid-item-rectangle" type="text" placeholder="Город доставки">
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="grid-item-rectangle">
+							<input class="grid-item-rectangle" type="text" placeholder="Масса груза, кг">
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="grid-item-rectangle">
+							<input class="grid-item-rectangle" type="text" placeholder="Контактный телефон">
+						</div>
+					</div>
+					<div class="grid-item">
+						<button class="grid-calc-btn">Быстрый рассчёт
+						</button>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<section class="page-black">
+			<section class="bg-white-big">
+				<div class="wrapper">
+
+
+				</div>
+
+				<h3 class="about-price-title"><img src="./images/left-border-txt.svg" alt="" src="left-border">
+					Узнайте стоимость грузоперевозки<br>
+					за 60 секунд + получите гарантированную
+					скидку
+				</h3>
+				<div class="bg-white-1">
+					<p class="">1/9</p>
+					<span class="circle-1">1</span>
+					<h4 class="type-text">
+							Выберите вид автотранспорта для доставки
+							груза
+						</h4>
+						<div class="grid-tr">
+						
+
+						<button class="btn-tr"><a class="d1"></a><p class="btn-tr-text">Догруз</p></button>
+						<button class="btn-tr"><a class="d1"></a><p class="btn-tr-text">Газель</p></button>
+
+						<button class="btn-tr"><a class="d1"></a><p class="btn-tr-text">3-тонник</p></button>
+
+						<button class="btn-tr"><a class="d1"></a><p class="btn-tr-text">5-тонник</p></button>
+
+						<button class="btn-tr"><a class="d1"></a><p class="btn-tr-text">Негабарит</p></button>
+
+						<button class="btn-tr"><a class="d1"></a><p class="btn-tr-text">10-тонник</p></button>
+
+						<button class="btn-tr"><a class="d1"></a><p class="btn-tr-text">Фура</p></button>
+</div>
+<img src="./images/2-1.png" class="tr-img" alt="Газель">
+						<input type="checkbox" class="">
+						*Поставьте галочку, если для
+						транспортировки<br>
+						груза необходим температурный режим
+						
+						<button class="grid-calc-btn">Следующий шаг
+						</button>
+					
+					
+				</div>
+				<div class="usl-title-block">
+					<div class="usl-title-border">
+						<p class="usl-title">Услуги</p>
+						<p class="usl-descr">
+							Мы предоставляем свои услуги как частным лицам,
+							так и представителям бизнеса, гарантируя
+							сохранность Вашего груза и точное прибытие в пункт
+							назначения в рамках установленных сроков.
+						</p>
+					</div>
+				</div>
+				</div>
+				</div>
+
+				<div class="container-usl">
+					<div class="img-truck-cont-1">
+					
+						<img src="./images/truck-1.png" alt="" class="img-truck-cont-1-img">
+						
+
+							<p href="#" class="title-img-truck">Грузоперевозки фурами <br>
+								по России</p>
+							<button type="button" class="img-truck-btn"><p href="#" class="img-truck-btn-text">подробнее<img src="./images/caret-right (1).svg" class="img-truck-btn-d"></p>
+								
+							</button>
+						
+					</div>
+
+					<div class="img-block">
+						<img src="./images/img-block-2.png" alt="">
+						<div class="img-descr-truck">
+							<p>Попутные грузоперевозки по России</p>
+						</div>
+					</div>
+
+					<div class="img-block">
+
+						<img class="" src="./images/img-block-3.png" alt="">
+						<div class="img-descr-truck">
+							<p>Грузоперевозки рефрижераторами</p>
+						</div>
+					</div>
+					<div class="img-block">
+
+						<img class="" src="./images/img-block-4.png" alt="">
+						<div class="img-descr-truck">
+							<p>Доставка сборных грузов по России от 100 до
+								800 кг (догрузом)</p>
+						</div>
+					</div>
+					<div class="img-block">
+						<img class="" src="./images/img-block-5.png" alt="">
+						<div class="img-descr-truck">
+							<p>Переезды межгород по России</p>
+						</div>
+					</div>
+					<div class="img-block">
+						<img class="" src="./images/img-block-6.png" alt="">
+						<div class="img-descr-truck">
+							<p>Перевозка домашних вещей по России от 100 кг</p>
+						</div>
+					</div>
+					<div class="img-block">
+						<img class="" src="./images/img-block-7.png" alt="">
+						<div class="img-descr-truck">
+							<p>Перевозка спецтехники по России
+							</p>
+						</div>
+					</div>
+					<div class="img-block">
+						</p><img class="" src="./images/img-block-8.png" alt="">
+						<div class="img-descr-truck">
+							<p>Перевозки Камазом по России<br>
+								от 5 до 10 тонн<br>
+							</p>
+						</div>
+					</div>
+					<div class="img-block">
+						<img class="" src="./images/img-block-9.png" alt="">
+						<div class="img-descr-truck">
+							<p>Перевозка автовозом
+							</p>
+						</div>
+					</div>
+					<div class="img-block">
+						<img class="" src="./images/img-block-10.png" alt="">
+						<div class="img-descr-truck">
+							<p>Контейнерные перевозки
+							</p>
+						</div>
+					</div>
+					<div class="img-block">
+						<img class="" src="./images/img-block-11.png" alt="">
+						<div class="img-descr-truck">
+							<p>Грузоперевозки в Калининград
+							</p>
+						</div>
+					</div>
+					<div class="img-block">
+						<img class="" src="./images/img-block-12.png" alt="">
+						<div class="img-descr-truck">
+							<p>Перевозка негабарита
+							</p>
+						</div>
+					</div>
+					<div class="img-block">
+						<img class="" src="./images/img-block-13.png" alt="">
+						<div class="img-descr-truck">
+							<p>Международные перевозки
+							</p>
+						</div>
+					</div>
+					<div class="img-block">
+						<img class="" src="./images/img-block-14.png" alt="">
+						<div class="img-descr-truck">
+							<p>Перевозки в Крым
+							</p>
+						</div>
+					</div>
+					<div class="img-block">
+						<img class="" src="./images/img-block-15.png" alt="">
+						<div class="img-descr-truck">
+							<p>Авиаперевозки
+							</p>
+						</div>
+					</div>
+					<div class="img-block">
+						<img class="" src="./images/img-block-16.png" alt="">
+						<div class="img-descr-truck">
+							<p>Военные (служебные) переезды с возвратом от
+								организации
+							</p>
+						</div>
+					</div>
+					<div class="img-block">
+						<img class="" src="./images/img-block-17.png" alt="">
+						<div class="img-descr-truck">
+							<p>Морские и речные перевозки
+							</p>
+						</div>
+					</div>
+					<div class="img-block">
+						<img class="" src="./images/img-block-18.png" alt="">
+						<div class="img-descr-truck">
+							<p>Железнодорожные перевозки
+							</p>
+						</div>
+					</div>
+				</div>
+				</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="about-us-container">
+					<div class="about-us-text">
+						<h3 class="about-us-title"><img src="./images/left-border-txt.svg" class="left-border">о
+							компании</h3>
+						<p class="about-us-description"><img class="q-m" src="./images/quot-marks.svg">
+							Здравствуйте, меня зовут Андрей Брылов —
+							основатель компании Brylov-Logistics. <br>
+							Грузоперевозки по России становятся с каждым
+							днем популярнее. Разнообразие грузов растет, а
+							потому растет и потребность в транспорте.
+							Услугами по транспортировке пользуются не
+							только крупные предприятия и организации.
+							Нередко люди заказывают частные перевозки.<br>
+							<br>
+							Мы поможем организовать Вашу грузоперевозку
+							быстро, качественно и безопасно в любой город
+							России вне зависимости от типа груза.<br>
+							<br>
+							Добро пожаловать!
+						</p>
+					</div>
+					<div class="dir-img-cont">
+					<img class="dir-img" src="./images/dir-img.png">
+					<img class="blue-logo" src="./images/blue-logo.png" alt="">
+					<p class="">
+						Руководитель компании Андрей Брылов
+					</p></div>
+				</div>
+				</div>
+				<div class="about-us-history">
+					<div class="history-item">
+						<p class="gold-num">4</p>
+						<p class="history-text">
+							года работы<br>
+							с 2018 года
+						</p>
+					</div>
+					<div class="history-item">
+						<p class="gold-num">20+</p>
+						<p class="history-text">
+							сотрудников<br>
+							в штате
+						</p>
+					</div>
+					<div class="history-item">
+						<p class="gold-num">2100+</p>
+						<p class="history-text">
+							перевозок<br>
+							осуществлено
+						</p>
+					</div>
+					<div class="history-item">
+						<p class="gold-num">272</p>
+						<p class="history-text">
+							постоянных <br>
+							клиентов
+						</p>
+					</div>
+				</div>
+				</div>
+				</div>
+			</section>
+			<section>
+				<div class="adv-container">
+
+
+					<h3 class="adv-title">
+						Преимущества
+					</h3>
+					<p class="adv-descr">
+						Предоставляем услуги погрузки и упаковки груза в
+						каждом городе России
+					</p>
+					<div class="adv-grid">
+						<div class="adv-block">
+							<p class="adv-block-t">
+								Страхование груза <img src="" alt="">
+							</p>
+							<p class="adv-block-d">
+								Делаем страховку Вашего груза по ставке 0.15
+								от стоимости груза. Компания партнер
+								"Спасские ворота".
+							</p>
+						</div>
+						<div class="adv-block">
+							<p class="adv-block-t">Скорость работы</p>
+							<p class="adv-block-d">
+								Среднее время подбора транспорта под запрос
+								клиента – 55 минут. Среднее время согласования
+								и подписания договора 16 минут. Среднее
+								расстояние, проходимое автотранспортом за
+								сутки – 800 км.
+							</p>
+						</div>
+						<div class="adv-block">
+							<p class="adv-block-t">
+								Отслеживание груза 24/7
+							</p>
+						</div>
+						<div class="adv-block">
+							<p class="adv-block-d">
+								Вы можете отслеживать статус вашего заказа,
+								набрав бесплатный номер горячей линии
+								<strong class="poluchite-raschet-emphasis-1">8 (499) 301-72-80</strong>
+								и сообщив
+							</p>
+
+							<p class="podrobnee-two">подробнее</p>
+						</div>
+						<div class="adv-block">
+							<p class="adv-block-t">
+								Не переплачивайте за перевозку<br>
+								– закажите догруз!
+							</p>
+							<p class="adv-block-d">
+								Догруз - груз от 50 до 800 кг. Он может быть
+								помещен в автомобиль, идущий попутным
+								маршрутом, при наличии
+							</p>
+
+							<p class="podrobnee-two">подробнее</p>
+						</div>
+
+						<div class="adv-block">
+							<p class="adv-block-d">
+								Предоставление оригиналов<br>
+								отчетных документов
+							</p>
+							<p class="adv-block-d">
+								Предоставляем полные пакет оригиналов отчетных
+								документов. Отправляем почтой в течении 5 дней
+								с момента выгрузки
+							</p>
+
+							<p class="podrobnee-two">подробнее</p>
+						</div>
+						<div class="adv-block">
+							<p class="adv-block-d">
+								Перевозки попутным транспортом<br>
+								до 30% ниже<br>
+								обычной перевозки!
+							</p>
+							<p class="adv-block-d">
+								Половина наших перевозок отдельным транспортом
+								осуществляется в попутном направлении.
+								Стоимость такой перевозки
+							</p>
+
+							<p class="podrobnee-two">подробнее</p>
+
+						</div>
+					</div>
+			</section>
+			<section>
+				<p class="map-title-1"><img src="./images/map-title-left.svg" alt="" class="map-title-left">
+					Мы работаем по всей россии
+				</p>
+				<img src="./images/map.png" alt="" class="map-img">
+
+
+			</section>
+			<section>
+				<div class="bg-blue">
+					<p class="">
+						Онлайн заявка на расчет стоимости доставки груза
+					</p>
+					<div class="bg-blue-container">
+
+						<input class="input-bg-blue" type="text" placeholder="Город отправления">
+						<button type="button" class="btn-arrows"><img src="./images/arrows.svg" alt=""></button>
+						<input class="input-bg-blue" type="text" placeholder="Тип авто">
+						<input class="input-bg-blue" type="text" placeholder="Город доставки">
+						<input class="input-bg-blue" type="text" placeholder="дата / дд.мм.гггг">
+						<input class="input-bg-blue" type="text" placeholder="Масса груза, кг">
+						<input class="input-bg-blue" type="text" placeholder="Контактный телефон">
+						<button class="btn-calc-bg-blue" type="text" placeholder="Рассчитать стоимость"></button>
+					</div>
+					<p class="ostavljaja-zajavku-vy-soglashaetes-s-poli-two">
+						*оставляя заявку, Вы соглашаетесь с политикой
+						конфиденциальности сайта
+					</p>
+				</div>
+
+
+				<div class="bg-white-bottom">
+
+					
+						
+						<h4 class="title-a-p-1"><img src="./images/left-border-txt.svg" class="left-border">
+							Информация об оплате
+							
+						</h4><p class="descr-a-p">
+							Подробнее о способах оплаты:
+						</p>
+<div class="about-payment">
+						<div class="about-payment-left">
+							<p class="pay-num">1</p>
+						<p class="beznalichnyj-raschet-s-n-ds-20">
+							Безналичный расчет с НДС 20%
+						</p>
+
+						<p class="pay-num">2</p>
+
+						<p class="beznalichnyj-raschet-bez-n-ds">
+							Безналичный расчет без НДС
+						</p>
+
+						<div class="ellipse-24"></div>
+						<p class="pay-num">3</p>
+
+						<p class="beznalichnyj-raschet-bez-n-ds">
+							Оплата наличными
+						</p>
+
+						<div class="ellipse-24"></div>
+						<p class="dostavka-gruzov-eight">4</p>
+
+						<p class="online-oplata">Online оплата</p></div>
+						<div class="beznal-right">
+							<div class="beznal-text">
+								<p class="beznal-t">
+									Безналичный расчет с НДС 20%
+								</p>
+								<p class="beznal-d">
+									Оплата производится c НДС 20% на основании
+									счета до выгрузки транспортного средства.
+									При некоторых условиях возможна постоплата.
+									Условия уточняйте у менеджера.
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="usl-otd-tr">
+						
+						<h4 class="title-a-p"><img src="./images/left-border-txt.svg" class="left-border">
+							УСЛУГИ<br>
+							ГРУЗОПЕРЕВОЗОК ПО РОССИИ<br>
+							ОТДЕЛЬНЫМ ТРАНСПОРТОМ
+						</h4>
+						<p class="descr-a-p">
+							Мы предоставляем свои услуги как частным
+							лицам, так и представителям бизнеса,
+							гарантируя сохранность Вашего груза и точное
+							прибытие в пункт назначения в рамках
+							установленных сроков.
+						</p>
+
+
+						<div class="usl-photo-block">
+							<div class="usl-img">
+								<img src="./images/usl-img-1.png" alt="" class="usl-img-item">
+								<p class="usl-img-text">
+									Перевозка бытовок
+									межгород по России
+								</p>
+								
+
+							</div>
+							<div class="usl-img">
+								<img src="./images/usl-img-2.png" alt="" class="usl-img">
+								<p class="usl-img-text">
+									Перевозка колесных<br>
+									ж/д пар по России
+								
+								<button type="button" class="">
+									подробнее
+								</button></p>
+							</div>
+							<div class="usl-img">
+								<img src="./images/usl-img-3.png" alt="" class="usl-img">
+								<p class="usl-img-text">
+									Как организовать
+									квартирный переезд
+									под ключ?
+								</p>
+
+							</div>
+
+							<div class="usl-img">
+								<img src="./images/usl-img-4.png" alt="" class="usl-img">
+								<p class="usl-img-text">
+									Что такое перевозка
+									попутным транспортом?
+								</p>
+
+							</div>
+						</div>
+					
+						<div class="btn-block-photos">
+							<button type="button" class="btn-toggle">
+								&lt;</button>
+									<button type="button" class="btn-toggle">&gt;
+									</button>
+						</div>
+						</div>
+				
+				<div class="tr-photos">
+					
+					<h4 class="title-a-p"><img src="./images/left-border-txt.svg" class="left-border">Фото наших перевозок</h4>
+					<div class="block-photos">
+						<img src="./images/photo-img1.png" alt="" class="photo-img ">
+						<img src="./images/photo-img2.png" alt="" class="photo-img ">
+						<img src="./images/photo-img3.png" alt="" class="photo-img ">
+						<img src="./images/photo-img4.png" alt="" class="photo-img ">
+						
+					</div><div class="btn-block-photos">
+							<button type="button" class="btn-toggle">
+								<</button>
+									<button type="button" class="btn-toggle">>
+									</button>
+						</div>
+				</div>
+
+				
+				<p class="title-a-p"><img src="./images/left-border-txt.svg" class="left-border">Отзывы</p>
+				<div class="otzyvy">
+					<div class="otz-block">
+						<p class="otz-text">
+							Переезжала из Сибири в Краснодарский край,
+							заказывала через Бырол-логистикс перевозку
+							попутным грузом.<br>
+							Боялась делать удаленно, а зря. Груз
+							доставили за 4 дня, водитель супер, Максим и
+							Анатолий спасибо!
+						</p>
+						<p class="podrobnee">подробнее</p>
+
+						<p class="tat-jana-chuguj">
+							Татьяна Чугуй
+						</p>
+					</div>
+					<div class="otz-block">
+						<p class="otz-text">
+							Переезжала из Сибири в Краснодарский край,
+							заказывала через Бырол-логистикс перевозку
+							попутным грузом.<br>
+							Боялась делать удаленно, а зря. Груз
+							доставили за 4 дня, водитель супер, Максим и
+							Анатолий спасибо!
+						</p>
+						<p class="podrobnee">подробнее</p>
+						<p class="tat-jana-chuguj">
+							Татьяна Чугуй
+						</p>
+					</div>
+					<div class="otz-block">
+						<p class="otz-text">
+							Переезжала из Сибири в Краснодарский край,
+							заказывала через Бырол-логистикс перевозку
+							попутным грузом.<br>
+							Боялась делать удаленно, а зря. Груз
+							доставили за 4 дня, водитель супер, Максим и
+							Анатолий спасибо!
+						</p>
+						<p class="podrobnee">подробнее</p>
+						<p class="tat-jana-chuguj">
+							Татьяна Чугуй
+						</p>
+					</div>
+				</div>
+				</div>
+				</div>
+			</section>
+
+
+
+
+
+	</main>
+	<footer class="footer">
+		<div class="footer-top">
+
+
+			<div class="footer-text"><img alt="" class="footer-img" src="./images/footer-logo.png">
+				Транспортная компания Brylov-Logistics - наша
+				миссия заключается в сохранении
+				эмоционального, материального благополучия
+				клиентов и развитии инфраструктуры за счёт
+				быстрых и систематизированных грузоперевозок
+				во всех регионах России.
+			</div>
+
+			<p class="footer-refs">
+				Услуги<br>
+				Преимущества<br>
+				О компании<br>
+				Направления
+			</p>
+			<p class="footer-refs">
+				Тарифы<br>
+				Отзывы<br>
+				Статьи<br>
+				Контакты
+			</p>
+			<div class="img-soc">
+			<img src="./images/vk.png" alt="" class="f-img-vk">
+			<img src="./images/ya-uslugi.png" alt="" class="f-img-yu">
+
+
+			<button type="button" class="btn-footer">
+				ОНЛАЙН ЗАЯВКА <img src="./images/caret-right.svg" class="btn-arrow-f">
+			</button></div>
+		</div>
+		<div class="footer-bottom">
+			<div class="f-bottom-block">
+				<img src="./images/telephone.svg" alt="" class="f-block-img">
+				<div class="f-text-block">
+					<p class="f-title-block">ЗАКАЗАТЬ ЗВОНОК</p>
+					<p class="f-descr-block">
+						8 (499) 301-72-80
+					</p>
+				</div>
+			</div>
+			<div class="f-bottom-block">
+				<img src="./images/placeholder.svg" alt="" class="f-block-img" src="">
+				<div class="f-text-block">
+					<p class="f-title-block">КАРТА</p>
+					<p class="f-descr-block">
+						город, улица, дом
+					</p>
+				</div>
+			</div>
+			<div class="f-bottom-block">
+				<img src="./images/email.svg" alt="" class="f-block-img">
+				<div class="f-text-block">
+					<p class="f-title-block">ПОЧТА</p>
+					<p class="f-descr-block">
+						autotransport24@yandex.ru
+					</p>
+				</div>
+			</div>
+
+		</div>
+		<p class="vse-prava-zaschischeny-brylov-logistics-2">
+			Все права защищены. © Brylov-Logistics 2022
+		</p>
+		<div></div>
+		</section>
+	</footer>
+
+	<script src="./js/main.js">
+
+		var swiper = new Swiper(".swiper", {
+			pagination: {
+				el: ".pagination",
+				type: "fraction",
+			},
+			effect: "fade",
+			allowTouchMove: false,
+			navigation: {
+				nextEl: ".swiper-next",
+				prevEl: ".swiper-prev",
+			},
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+		});
+	</script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
