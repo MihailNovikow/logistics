@@ -251,8 +251,8 @@ container {
 }
 
 .header-top {
-  /* position: absolute; */
-  width: 1920px;
+  /* position: absolute; 
+  width: 1920px;*/
   height: 104px;
   left: 0px;
   top: 0px;
@@ -593,7 +593,6 @@ height: 54px;
 
 
 .phone-num {
-  width: 200px;
   color: rgba(19, 34, 170, 1);
   position: relative;
   top: 0px;
@@ -1151,13 +1150,16 @@ top: 1453px;
 }
 
 .adv-block {
+  display: flex;
   width: 401px;
   height: 331px;
   left: 1200px;
   top: 6189px;
-
   background: rgba(196, 196, 196, 0.1);
   border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .adv-block-t {
